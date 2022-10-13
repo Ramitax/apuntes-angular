@@ -1,8 +1,5 @@
 # Angular
 
-**Proyecto archivado.** Nueva localización en [apuntes-general](https://github.com/alxgcrz/apuntes-general).
-
-----
 
 Es una plataforma y un framework para crear aplicaciones cliente en HTML y TypeScript. Angular está escrito en TypeScript. Implementa funciones básicas y opcionales como un conjunto de bibliotecas TypeScript que se importan en las aplicaciones. Angular aprovecha la tecnología de los componentes web o _'web components'_ y el _'Shadow DOM'_ para apoyar el desarrollo impulsado por componentes.
 
@@ -35,81 +32,13 @@ Más información:
 <https://angular.io/cli>
 <https://academia-binaria.com/hola-angular-cli/>
 
-### Prerequisitos
-
-Angular requiere Node.js versión 10.0.9 o superior. Podemos instalar Node.js descargándolo de su [página oficial](https://nodejs.org/).
-
-Cuando tengamos instalado _node.js_ o si ya lo teníamos instalado podemos comprobar si está correctamente configurado escribiendo en el terminal `node -v`. Si está todo correcto nos mostrará la versión de _node.js_.
-
-Cuando se instala _node.js_ también se instala _NPM_. Para comprobar si está correctamente instalado escribimos en el terminal `npm -v` lo que nos mostrará la versión instalada.
-
-Para desarrollar en Angular podemos usar simplemente Javascript, pero se recomienda usar TypeScript, dado que Angular está desarrollado con TypeScript y todos los ejemplos y código que se encuentra en la web estará escrito en TypeScript. Para instalar Typescript se utiliza también la herramienta *npm*. Abrimos un terminal/consola y ejecutamos `npm install -g typescript`.
-
-```bash
-//Summary
-node -v
-npm -v
-npm install -g typescript
-tsc --version
-```
-
-### Instalación de _'Angular CLI'_
-
-_'Angular CLI'_ o simplemente _CLI_ es la herramienta de línea de comandos estándar para crear, depurar y publicar aplicaciones Angular.
-
-Para instalar 'Angular CLI' abrimos un terminal/consola y ejecutamos el comando `npm install -g @angular/cli` lo que instala 'Angular CLI' de forma global lo que nos permitirá usar la herramienta desde cualquier directorio.
-
-La sintaxis para instalar Angular (@angular/paquete) es una nueva característica de *npm* llamada **'scoped packages'**. Permite agrupar los paquetes en una misma carpeta.
-
-Comprobamos la versión instalada ejecutando en un terminal/consola `ng version`. La ayuda está disponible tanto de modo general (`ng help`) como para cada comando de la herramiento (`ng new --help` o por ejemplo `ng generate --help`).
-
-```terminal
-npm install -g @angular/cli   // Instalar Angular CLI
-ng version
-ng help                       // Ver ayuda general
-ng generate --help            // Ayuda de un comando en concreto
-```
-
-### Crear un _'workspace'_ y una aplicación inicial
-
-Las aplicaciones Angular se desarrollan en el contexto de una espacio de trabajo o ['workspace'](https://angular.io/guide/glossary#workspace). Un espacio de trabajo puede contener múltiples aplicaciones y bibliotecas. La aplicación inicial creada con el comando `ng new` está en el nivel top del espacio de trabajo. Cuando generamos aplicaciones o bibliotecas adicionales, éstas se crean dentro de la subcarpeta `projects/`.
-
-Para crear un nuevo espacio de trabajo y una aplicación inicial dentro de este nuevo espacio de trabajo, abrimos un terminal y escribimos:
-
-```terminal
-ng new my-app  // Cambiando 'my-app' por el nombre de nuestra nueva aplicación
-```
-
-El comando `ng new` nos solicitará información para configurar la aplicación inicial. Lo más habitual es usar la configuración que viene por defecto. Para más información podemos consultar la documentación del comando [`ng new`](https://angular.io/cli/new).
-
-'Angular CLI' instalará todas las bibliotecas y dependencias necesarias, lo que se podrá demorar varios minutos.
-
-Finalmente tendremos una aplicación inicial completamente funcional y las configuraciones necesarias para su depuración, pruebas y ejecución.
-
-Por defecto la aplicación se crea con el prefijo `app` que se usará en todos los componentes. Puede personalizarse usando el modificador `--prefix`, como por ejmplo `ng new --prefix sigma`.
-
-### Ejecutar la aplicación
-
-'Angular CLI' incluye un servidor, para que pueda crear y servir su aplicación fácilmente a nivel local.
-
-Entramos en el directorio de la apliación y lanzamos el servidor con `ng serve --open`. Con el parámetro `--open` le indicamos que abra el navegador y cargue la página <http://localhost:4200>:
-
-```terminal
-cd my-app
-ng serve --open // Abre el navegador directamente
-```
-
-El comando `ng serve` inicia el servidor, observa el código fuente, reconstruye automáticamente la aplicación cuando detecta algún cambio en el código y recarga la página en el navegador.
-
 ### Estructura de una aplicación Angular
 
 <https://angular.io/guide/file-structure>
 
-Cuando ejecutamos el comando `ng new` se instalan las bibliotecas y dependencias necesarias en el nuevo _workspace_ además del esqueleto funcional de una aplicación dentro de la carpeta `src/`. Esta aplicación se considera la aplicación principal o aplicación raíz. El directorio raíz del espacio de trabajo contiene todos los ficheros de configuración, etc.. necesarios para construir y servir la aplicación Angular.
+### Decoradores 
 
-La aplicación inicial creada es la apliación por defecto para todos los comandos lanzados a través de la CLI.
-
-Para un espacio de trabajo que contendrá una sóla aplicación, la subcarpeta `src/` del espacio de trabajo contendrá los ficheros de código (lógica de la aplicación, datos y assets) de la aplicación raíz. Para espacios de trabajo de tipo _'multi-project'_ cada proyecto estará en su propia carpeta dentro de la carpeta `projects/`.
+Un Class Decorator (Decorador de Clase) es declarado justamente antes de la clase. La clase decorator es aplicada al constructor de la clase, y puede ser utilizado para observar, modificar o reemplazar la definición de una clase.
 
 #### Ficheros de configuración
 
