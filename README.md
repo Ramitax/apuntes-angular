@@ -238,7 +238,7 @@ Cada módulo puede exportar sus propios componentes o los componentes de tercero
 
 #### Sintaxis de las plantillas
 
-Una plantilla contiene etiquetas HTML normales pero además contiene una [sintaxis de plantillas propia](https://angular.io/guide/template-syntax) qyue altera el HTML basado en la lógica de la aplicación, su estado y los datos del DOM.
+Una plantilla contiene etiquetas HTML normales pero además contiene una [sintaxis de plantillas propia](https://angular.io/guide/template-syntax) que altera el HTML basado en la lógica de la aplicación, su estado y los datos del DOM.
 
 La plantilla usan el _'data binding'_ para coordinar los datos de la aplicación con los datos del DOM, _'pipes'_ para transformar los datos antes de ser mostrados y _'directives'_ para aplicar la lógica de la aplicación a lo que se muestra.
 
